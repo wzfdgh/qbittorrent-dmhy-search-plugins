@@ -55,7 +55,7 @@ class dmhy(object):
             tmp['seeds'] = int(seeds) if seeds.isalnum() else -1
             tmp['leech'] = int(leech) if leech.isalnum() else -1
             tmp[
-                'link'] = f"https://dl.dmhy.org/{tmp['date']}/{tr.xpath('./td[4]/a[2]/@href')[0].split('magnet:?xt=urn:btih:')[1]}.torrent"
+                'link'] = f"https://dl.dmhy.org/{tmp['date']}/{tr.xpath('./td[4]/a[2]/@href')[0].split('magnet:?xt.1=urn:btih:')[1]}.torrent"
             res.append(tmp)
             prettyPrinter(tmp)
         return res
